@@ -1,0 +1,77 @@
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+.site_header {
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.logo {
+	height: 3rem;
+}
+.site_title {
+	color: white;
+}
+.start_screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgb(0 0 0 / 0.5);
+}
+.start_screen.hide {
+	display: none;
+}
+
+.start_screen form {
+	height: 75%;
+	width: 90%;
+	background: lightblue;
+	margin: 5% auto;
+}
+.legal_footnote {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	margin: 0;
+	background: black;
+	color: white;
+}
+
+.notes_table.hide {
+	display: none;
+}
+.notes_table td {
+	border: 1px solid black;
+}
+
+.change_icon {
+	width: 2rem;
+	height: 2rem;
+	background: none;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* No JS styles 
+====================== */
+.nojs .start_screen,
+.nojs .notes_table {
+	display: none;
+}
+
+.js_required_banner {
+	background: lightblue;
+	padding: 1rem;
+	text-align: center;
+}

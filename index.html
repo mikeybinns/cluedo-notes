@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cluedo Notes</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body class="nojs">
+		<script>
+			document.getElementsByTagName('body')[0].classList.replace('nojs', 'js');
+		</script>
+		<header class="site_header">
+			<img class="logo" src="/cluedo.jpg" alt="Cluedo logo." />
+			<h1 class="site_title">Cluedo detective notes</h1>
+		</header>
+		<noscript>
+			<div class="js_required_banner">
+				<p>
+					Javascript is required for this site to work. Don't worry, this site doesn't use any tracking or ad software,
+					only the javascript required to make the page work. Please enable javascript and refresh.
+				</p>
+			</div>
+		</noscript>
+		<main>
+			<div class="start_screen" id="start_screen">
+				<form method="POST" id="start_form">
+					<fieldset class="players">
+						<legend>Players:</legend>
+						<div class="field">
+							<label for="player_count">Player count</label>
+							<input
+								type="range"
+								name="player_count"
+								id="player_count"
+								min="2"
+								value="4"
+								max="6"
+								onChange="player_count_label.value = player_count.valueAsNumber"
+							/>
+							<output name="player_count_label" for="player_count">4</output>
+						</div>
+						<script type="module">
+							import { require_names_for_players } from './js/create_start_form.js';
+							require_names_for_players();
+							const player_count = document.getElementById('player_count');
+							player_count.addEventListener('change', require_names_for_players);
+						</script>
+						<div class="field">
+							<label for="player_1">Player one</label>
+							<input type="text" name="player_1" id="player_1" value="a" />
+						</div>
+						<div class="field">
+							<label for="player_2">Player two</label>
+							<input type="text" name="player_2" id="player_2" value="b" />
+						</div>
+						<div class="field">
+							<label for="player_3">Player three</label>
+							<input type="text" name="player_3" id="player_3" value="c" />
+						</div>
+						<div class="field">
+							<label for="player_4">Player four</label>
+							<input type="text" name="player_4" id="player_4" value="d" />
+						</div>
+						<div class="field">
+							<label for="player_5">Player five</label>
+							<input type="text" name="player_5" id="player_5" />
+						</div>
+						<div class="field">
+							<label for="player_6">Player six</label>
+							<input type="text" name="player_6" id="player_6" />
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Suspects:</legend>
+						<div class="field suspect_select_field">
+							<label for="suspect_1">Suspect one</label>
+						</div>
+						<div class="field suspect_select_field">
+							<label for="suspect_2">Suspect two</label>
+						</div>
+						<div class="field suspect_select_field">
+							<label for="suspect_3">Suspect three</label>
+						</div>
+						<div class="field suspect_select_field">
+							<label for="suspect_4">Suspect four</label>
+						</div>
+						<div class="field suspect_select_field">
+							<label for="suspect_5">Suspect five</label>
+						</div>
+						<div class="field suspect_select_field">
+							<label for="suspect_6">Suspect six</label>
+						</div>
+						<script type="module">
+							import { create_suspect_select } from './js/create_start_form.js';
+							const suspect_select_original = create_suspect_select();
+							const suspect_fields = document.getElementsByClassName('suspect_select_field');
+							for (let $i = 0; $i < suspect_fields.length; $i++) {
+								let suspect_number = $i + 1,
+									suspect_select = suspect_select_original.cloneNode(true);
+								suspect_select.name = `suspect_${suspect_number}`;
+								suspect_select.id = `suspect_${suspect_number}`;
+								suspect_select.childNodes[$i].selected = true;
+								suspect_fields[$i].append(suspect_select);
+							}
+						</script>
+					</fieldset>
+					<input type="submit" value="Create notes table" />
+					<script type="module">
+						import { catch_form_submit } from './js/create_table.js';
+						catch_form_submit();
+					</script>
+				</form>
+			</div>
+			<table id="notes_table" class="notes_table hide">
+				<thead>
+					<tr id="players_row">
+						<!-- scope defined for some assistive tech: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table#scoping_rows_and_columns -->
+					</tr>
+				</thead>
+				<tbody id="notes_table_body"></tbody>
+			</table>
+			<p class="legal_footnote">
+				This site has no affiliation with Cluedo or Hasbro. The Cluedo name and logo are trademarks of Hasbro. Cluedo
+				&copy; Hasbro. Site by Mikey Binns.
+			</p>
+		</main>
+	</body>
+</html>
