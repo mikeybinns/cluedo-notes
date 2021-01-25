@@ -1,3 +1,5 @@
+/* Font definitions
+====================== */
 @font-face {
 	font-family: 'Futura';
 	src: url('./fonts/Futura-CondensedExtraBold.woff2') format('woff2'),
@@ -15,6 +17,8 @@
 	font-display: swap;
 }
 
+/* Global styles
+====================== */
 * {
 	box-sizing: border-box;
 }
@@ -25,28 +29,46 @@ body {
 	min-height: 100vh;
 	position: relative;
 	margin: 0;
-	padding-bottom: 6rem;
+	padding-bottom: 8rem;
 	font-family: 'Futura';
 	text-transform: uppercase;
 }
+@media screen and (min-width: 379px) {
+	body {
+		padding-bottom: 7rem;
+	}
+}
+@media screen and (min-width: 524px) {
+	body {
+		padding-bottom: 6rem;
+	}
+}
+@media screen and (min-width: 1012px) {
+	body {
+		padding-bottom: 4.5rem;
+	}
+}
+/* Header
+====================== */
 .site_header {
 	background: black;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 	padding: 1rem;
 }
 .logo {
-	height: 3rem;
+	height: 1.75rem;
+	margin-right: 1rem;
 }
 .site_title {
 	color: white;
 	font-weight: 800;
-	font-size: 2rem;
+	font-size: 1.25rem;
+	margin: 0;
 }
-.site_title::first-letter {
-	font-size: 2.5rem;
-}
+
+/* Start Screen
+====================== */
 .start_screen {
 	position: absolute;
 	top: 0;
@@ -54,19 +76,34 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background: rgb(0 0 0 / 0.5);
+	padding: 5%;
+	z-index: 1;
+}
+.start_screen form {
+	height: 100%;
+	width: 100%;
+	background: lightblue;
+	margin: 0;
+	padding: 1rem 0.5rem;
 }
 .start_screen label,
 .start_screen output {
 	font-style: oblique;
 	font-weight: bold;
 }
-
-.start_screen form {
-	height: 75%;
-	width: 90%;
-	background: lightblue;
-	margin: 5% auto;
+.start_screen fieldset {
+	border: none;
 }
+.start_screen legend {
+	font-weight: 800;
+	font-size: 1.5rem;
+}
+.start_screen legend::first-letter {
+	font-size: 2rem;
+}
+
+/* Notes table 
+====================== */
 .notes_table td {
 	border: 1px solid black;
 }
@@ -86,6 +123,8 @@ body {
 	padding: 0.25rem;
 }
 
+/* Footer
+====================== */
 .legal_footnote {
 	width: 100%;
 	text-align: center;
@@ -93,7 +132,7 @@ body {
 	margin: 0;
 	background: black;
 	color: white;
-	position: fixed;
+	position: absolute;
 	bottom: 0;
 	font-style: oblique;
 	font-weight: bold;
