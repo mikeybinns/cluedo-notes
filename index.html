@@ -71,38 +71,34 @@
 							<input type="text" name="player_6" id="player_6" value="Bilbo Baggins" />
 						</div>
 					</fieldset>
-					<fieldset>
-						<legend>Suspects:</legend>
-						<div class="field suspect_select_field">
-							<label for="suspect_1">Suspect one</label>
+					<fieldset class="game_version_field_group">
+						<legend>Game Version:</legend>
+						<div class="field game_version_field game_version_new_field selected" id="game_version_new_field">
+							<label for="game_version_new">
+								<span class="label_text">Dr. Orchid</span>
+								<img src="./img/dr-orchid.jpg" alt="" />
+								<input type="radio" name="game_version" id="game_version_new" value="orchid" required checked />
+							</label>
 						</div>
-						<div class="field suspect_select_field">
-							<label for="suspect_2">Suspect two</label>
+						<div class="field game_version_field game_version_old_field" id="game_version_old_field">
+							<label for="game_version_old">
+								<span class="label_text">Mrs. White</span>
+								<img src="./img/mrs-white.jpg" alt="" />
+								<input type="radio" name="game_version" id="game_version_old" value="white" required />
+							</label>
 						</div>
-						<div class="field suspect_select_field">
-							<label for="suspect_3">Suspect three</label>
-						</div>
-						<div class="field suspect_select_field">
-							<label for="suspect_4">Suspect four</label>
-						</div>
-						<div class="field suspect_select_field">
-							<label for="suspect_5">Suspect five</label>
-						</div>
-						<div class="field suspect_select_field">
-							<label for="suspect_6">Suspect six</label>
-						</div>
-						<script type="module">
-							import { create_suspect_select } from './js/create_start_form.js';
-							const suspect_select_original = create_suspect_select();
-							const suspect_fields = document.getElementsByClassName('suspect_select_field');
-							for (let $i = 0; $i < suspect_fields.length; $i++) {
-								let suspect_number = $i + 1,
-									suspect_select = suspect_select_original.cloneNode(true);
-								suspect_select.name = `suspect_${suspect_number}`;
-								suspect_select.id = `suspect_${suspect_number}`;
-								suspect_select.childNodes[$i].selected = true;
-								suspect_fields[$i].append(suspect_select);
-							}
+						<script type="text/javascript">
+							const game_version_new = document.getElementById('game_version_new'),
+								game_version_old = document.getElementById('game_version_old');
+
+							game_version_new.addEventListener('click', function () {
+								document.getElementById('game_version_new_field').classList.add('selected');
+								document.getElementById('game_version_old_field').classList.remove('selected');
+							});
+							game_version_old.addEventListener('click', function () {
+								document.getElementById('game_version_old_field').classList.add('selected');
+								document.getElementById('game_version_new_field').classList.remove('selected');
+							});
 						</script>
 					</fieldset>
 					<input type="submit" value="Create notes table" />

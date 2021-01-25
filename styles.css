@@ -101,6 +101,50 @@ body {
 .start_screen legend::first-letter {
 	font-size: 2rem;
 }
+.start_screen .game_version_field_group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 2px solid lightblue;
+	border-radius: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.start_screen .game_version_field_group:focus-within {
+	border-color: rgb(2, 72, 221);
+}
+
+.start_screen .game_version_field {
+	padding: 0.25rem;
+	border-radius: 0.75rem;
+	border: 2px solid lightblue;
+	position: relative;
+}
+.start_screen .game_version_field input {
+	position: absolute;
+	top: 50%;
+	z-index: -1;
+}
+.start_screen .game_version_old_field.selected {
+	background: #ffffff;
+	border-color: #ffffff;
+}
+.start_screen .game_version_new_field.selected {
+	background: #bc4177;
+	border-color: #bc4177;
+}
+.start_screen .game_version_new_field.selected .label_text {
+	color: #fff;
+}
+.start_screen .game_version_field_group legend {
+	flex: 1 0 100%;
+}
+.start_screen .game_version_field img {
+	width: 6.5rem;
+	height: auto;
+	border-radius: 0.5rem;
+	margin: auto;
+	display: block;
+}
 
 /* Notes table 
 ====================== */
