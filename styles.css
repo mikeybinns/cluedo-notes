@@ -85,6 +85,7 @@ body {
 	background: lightblue;
 	margin: 0;
 	padding: 1rem 0.5rem;
+	overflow: scroll;
 }
 .start_screen label,
 .start_screen output {
@@ -100,6 +101,14 @@ body {
 }
 .start_screen legend::first-letter {
 	font-size: 2rem;
+}
+.start_screen .field {
+	margin: 0.5rem 0;
+}
+.start_screen input[type='text'] {
+	width: 100%;
+	font-size: 1rem;
+	padding: 0.25rem;
 }
 .start_screen .game_version_field_group {
 	display: flex;
