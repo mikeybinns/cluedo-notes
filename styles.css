@@ -146,6 +146,20 @@ body {
 	display: block;
 }
 
+.start_screen .start_button {
+	margin: auto;
+	display: block;
+	font-family: 'Futura';
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 1.5rem;
+	background: #7c4266;
+	border: none;
+	color: white;
+	padding: 0.5rem;
+	letter-spacing: 1px;
+}
+
 /* Notes table 
 ====================== */
 .notes_table td {
