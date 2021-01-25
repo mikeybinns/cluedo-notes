@@ -80,12 +80,15 @@ body {
 	z-index: 1;
 }
 .start_screen form {
-	height: 100%;
+	height: auto;
+	max-height: 85%;
 	width: 100%;
 	background: lightblue;
 	margin: 0;
-	padding: 1rem 0.5rem;
-	overflow: scroll;
+	padding: 1rem 0.5rem 2rem;
+	overflow-y: auto;
+	max-width: 30rem;
+	margin: auto;
 }
 .start_screen label,
 .start_screen output {
@@ -113,7 +116,7 @@ body {
 .start_screen .game_version_field_group {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 	border: 2px solid lightblue;
 	border-radius: 0.5rem;
 	margin-bottom: 0.5rem;
@@ -171,12 +174,38 @@ body {
 
 /* Notes table 
 ====================== */
+.notes_table {
+	width: 90%;
+	margin: auto;
+	max-width: 30rem;
+}
+.notes_table .player_heading {
+	position: sticky;
+	top: 0;
+	background: white;
+}
+.notes_table .player_heading:not(.player_heading_label) span {
+	position: absolute;
+	transform: rotate(90deg);
+	transform-origin: 100% 100%;
+	bottom: 0.5rem;
+	right: 80%;
+	white-space: nowrap;
+	display: block;
+}
 .notes_table td {
 	border: 1px solid black;
 }
 .notes_table th {
 	font-style: oblique;
 	font-weight: bold;
+}
+.notes_table th.divider {
+	background: black;
+	color: white;
+}
+.notes_table tr:nth-child(even) {
+	background-color: #f2f2f2;
 }
 
 .change_icon {
