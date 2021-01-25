@@ -28,11 +28,18 @@ export function create_room_select() {
 	});
 	return select;
 }
-export function require_names_for_players() {
+export function update_player_fields() {
 	const player_count = document.getElementById('player_count').value;
 	for (let $i = 0; $i < 6; $i++) {
 		const player_number = $i + 1,
+			field_group = document.getElementById(`field_player_${player_number}`),
 			input = document.getElementById(`player_${player_number}`);
-		input.required = player_number <= player_count ? true : false;
+		if (player_number <= player_count) {
+			input.required = true;
+			field_group.classList.remove('hide');
+		} else {
+			input.required = false;
+			field_group.classList.add('hide');
+		}
 	}
 }
