@@ -1,8 +1,33 @@
+@font-face {
+	font-family: 'Futura';
+	src: url('./fonts/Futura-CondensedExtraBold.woff2') format('woff2'),
+		url('./fonts/Futura-CondensedExtraBold.woff') format('woff'), url('./fonts/Futura-CondensedExtraBold.otf');
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('./fonts/Futura-CondensedBoldOblique.otf');
+	font-weight: bold;
+	font-style: oblique;
+	font-display: swap;
+}
+
 * {
 	box-sizing: border-box;
 }
+.hide {
+	display: none;
+}
 body {
+	min-height: 100vh;
+	position: relative;
 	margin: 0;
+	padding-bottom: 6rem;
+	font-family: 'Futura';
+	text-transform: uppercase;
 }
 .site_header {
 	background: black;
@@ -16,6 +41,11 @@ body {
 }
 .site_title {
 	color: white;
+	font-weight: 800;
+	font-size: 2rem;
+}
+.site_title::first-letter {
+	font-size: 2.5rem;
 }
 .start_screen {
 	position: absolute;
@@ -25,8 +55,10 @@ body {
 	height: 100vh;
 	background: rgb(0 0 0 / 0.5);
 }
-.start_screen.hide {
-	display: none;
+.start_screen label,
+.start_screen output {
+	font-style: oblique;
+	font-weight: bold;
 }
 
 .start_screen form {
@@ -35,20 +67,12 @@ body {
 	background: lightblue;
 	margin: 5% auto;
 }
-.legal_footnote {
-	width: 100%;
-	text-align: center;
-	padding: 1rem;
-	margin: 0;
-	background: black;
-	color: white;
-}
-
-.notes_table.hide {
-	display: none;
-}
 .notes_table td {
 	border: 1px solid black;
+}
+.notes_table th {
+	font-style: oblique;
+	font-weight: bold;
 }
 
 .change_icon {
@@ -60,6 +84,19 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: 0.25rem;
+}
+
+.legal_footnote {
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	margin: 0;
+	background: black;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	font-style: oblique;
+	font-weight: bold;
 }
 
 /* No JS styles 
