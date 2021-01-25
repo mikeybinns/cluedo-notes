@@ -108,7 +108,6 @@ function add_location_rows(form_data) {
 	const table_body = document.getElementById('notes_table_body');
 	Object.entries(locations).forEach((room) => {
 		let [key, value] = room;
-		console.log(value);
 		const row_group = document.createElement('tr');
 		const row_label = document.createElement('th');
 		row_label.scope = 'row';
