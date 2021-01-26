@@ -151,7 +151,6 @@ function set_player_name_height(player_count) {
 		if ($i > 0) {
 			const span = document.getElementById(`player_name_${$i}`);
 			const span_height = span.getBoundingClientRect().height;
-			console.log({ span_height });
 			largest_width = largest_width < span_height ? span_height : largest_width;
 		}
 	}
