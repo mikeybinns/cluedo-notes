@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+	"name": "Cluedo Detective Notes",
+	"short_name": "Cluedo Notes",
+	"version": "1.0",
+	"developer": {
+		"name": "Mikey Binns",
+		"url": "https://fastloading.website/"
+	},
+	"icons": [
+		{
+			"src": "favicon.png",
+			"sizes": "64x64 32x32 24x24 16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "logo192.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "logo512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"default_locale": "en",
+	"description": "This is designed as acompanion to the board game Cluedo. Use this instead of printing out more notes.",
+	"display": "minimal-ui",
+	"background_color": "#fff",
+	"start_url": "/cluedo-notes/"
+}
