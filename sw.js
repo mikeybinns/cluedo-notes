@@ -19,6 +19,7 @@ var URLS = [
 	'/cluedo-notes/icons/favicon.png',
 	'/cluedo-notes/icons/logo192.png',
 	'/cluedo-notes/icons/logo512.png',
+	'/cluedo-notes/manifest.json',
 ];
 
 // Respond with cached resources
