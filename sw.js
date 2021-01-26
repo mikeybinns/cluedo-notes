@@ -16,6 +16,9 @@ var URLS = [
 	'/cluedo-notes/js/data.js',
 	'/cluedo-notes/js/update_icon.js',
 	'/cluedo-notes/styles.css',
+	'/cluedo-notes/icons/favicon.png',
+	'/cluedo-notes/icons/logo192.png',
+	'/cluedo-notes/icons/logo512.png',
 ];
 
 // Respond with cached resources
