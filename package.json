@@ -4,7 +4,6 @@
 	"description": "A notes app for cluedo",
 	"scripts": {
 		"prepare": "husky install",
-		"test": "test",
 		"build:css": "npm run generate:css",
 		"watch:css": "npm run generate:css -- --watch",
 		"generate:css": "postcss src/css/styles.css -o assets/css/styles.css",
