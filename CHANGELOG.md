@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/mikeybinnswebdesign/cluedo-notes/compare/v1.1.0...v1.1.1) (2022-04-10)
+
+
+### Bug Fixes
+
+* invalid remove test command ([4b3cccf](https://github.com/mikeybinnswebdesign/cluedo-notes/commit/4b3cccf153c5080bd0ecf285eddc332605cedbf4))
+
 ## 1.1.0 (2022-04-10)
 
 
