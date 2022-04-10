@@ -3,7 +3,10 @@
 	"version": "1.0.1",
 	"description": "A notes app for cluedo",
 	"scripts": {
-		"test": "test"
+		"test": "test",
+		"build:css": "npm run generate:css",
+		"watch:css": "npm run generate:css -- --watch",
+		"generate:css": "postcss src/css/styles.css -o assets/css/styles.css"
 	},
 	"repository": {
 		"type": "git",
@@ -21,10 +24,19 @@
 		"url": "https://github.com/mikeybinnswebdesign/cluedo-notes/issues"
 	},
 	"homepage": "https://github.com/mikeybinnswebdesign/cluedo-notes#readme",
+	"browserslist": [
+		"defaults",
+		"not dead",
+		"not IE 11"
+	],
 	"devDependencies": {
 		"@commitlint/cli": "^16.2.3",
 		"@commitlint/config-conventional": "^16.2.1",
+		"autoprefixer": "^10.4.4",
+		"cssnano": "^5.1.7",
 		"husky": "^7.0.4",
+		"postcss": "^8.4.12",
+		"postcss-cli": "^9.1.0",
 		"prettier": "^2.6.2"
 	}
 }
