@@ -3,6 +3,7 @@
 	"version": "1.0.1",
 	"description": "A notes app for cluedo",
 	"scripts": {
+		"prepare": "husky install",
 		"test": "test",
 		"build:css": "npm run generate:css",
 		"watch:css": "npm run generate:css -- --watch",
