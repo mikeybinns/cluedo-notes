@@ -1,0 +1,29 @@
+{
+  "name": "cluedo-notes",
+  "version": "1.0.0",
+  "description": "A notes app for cluedo",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeybinnswebdesign/cluedo-notes.git"
+  },
+  "keywords": [
+    "cluedo",
+    "notes",
+    "games",
+    "clue"
+  ],
+  "author": "Mikey Binns",
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/mikeybinnswebdesign/cluedo-notes/issues"
+  },
+  "homepage": "https://github.com/mikeybinnswebdesign/cluedo-notes#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "husky": "^7.0.4"
+  }
+}
