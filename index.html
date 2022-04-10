@@ -11,9 +11,9 @@
 	</head>
 	<body class="nojs">
 		<script>
-			document.getElementsByTagName('body')[0].classList.replace('nojs', 'js');
+			document.getElementsByTagName("body")[0].classList.replace("nojs", "js");
 			if (navigator.serviceWorker) {
-				navigator.serviceWorker.register('/cluedo-notes/sw.js', { scope: '/cluedo-notes/' });
+				navigator.serviceWorker.register("/cluedo-notes/sw.js", { scope: "/cluedo-notes/" });
 			}
 		</script>
 		<header class="site_header">
@@ -47,10 +47,10 @@
 							<output name="player_count_label" for="player_count">4</output>
 						</div>
 						<script type="module">
-							import { update_player_fields } from './js/create_start_form.js';
+							import { update_player_fields } from "./js/create_start_form.js";
 							update_player_fields();
-							const player_count = document.getElementById('player_count');
-							player_count.addEventListener('change', update_player_fields);
+							const player_count = document.getElementById("player_count");
+							player_count.addEventListener("change", update_player_fields);
 						</script>
 						<div class="field" id="field_player_1">
 							<label for="player_1">Player one</label><br />
@@ -94,22 +94,22 @@
 							</label>
 						</div>
 						<script type="text/javascript">
-							const game_version_new = document.getElementById('game_version_new'),
-								game_version_old = document.getElementById('game_version_old');
+							const game_version_new = document.getElementById("game_version_new"),
+								game_version_old = document.getElementById("game_version_old");
 
-							game_version_new.addEventListener('click', function () {
-								document.getElementById('game_version_new_field').classList.add('selected');
-								document.getElementById('game_version_old_field').classList.remove('selected');
+							game_version_new.addEventListener("click", function () {
+								document.getElementById("game_version_new_field").classList.add("selected");
+								document.getElementById("game_version_old_field").classList.remove("selected");
 							});
-							game_version_old.addEventListener('click', function () {
-								document.getElementById('game_version_old_field').classList.add('selected');
-								document.getElementById('game_version_new_field').classList.remove('selected');
+							game_version_old.addEventListener("click", function () {
+								document.getElementById("game_version_old_field").classList.add("selected");
+								document.getElementById("game_version_new_field").classList.remove("selected");
 							});
 						</script>
 					</fieldset>
 					<input type="submit" class="start_button" value="Create notes table" />
 					<script type="module">
-						import { catch_form_submit } from './js/create_table.js';
+						import { catch_form_submit } from "./js/create_table.js";
 						catch_form_submit();
 					</script>
 				</form>
