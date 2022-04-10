@@ -1,17 +1,17 @@
 /* Font definitions
 ====================== */
 @font-face {
-	font-family: "Futura";
-	src: url("./fonts/Futura-CondensedExtraBold.woff2") format("woff2"),
-		url("./fonts/Futura-CondensedExtraBold.woff") format("woff"), url("./fonts/Futura-CondensedExtraBold.otf");
+	font-family: 'Futura';
+	src: url('./fonts/Futura-CondensedExtraBold.woff2') format('woff2'),
+		url('./fonts/Futura-CondensedExtraBold.woff') format('woff'), url('./fonts/Futura-CondensedExtraBold.otf');
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: "Futura";
-	src: url("./fonts/Futura-CondensedBoldOblique.otf");
+	font-family: 'Futura';
+	src: url('./fonts/Futura-CondensedBoldOblique.otf');
 	font-weight: bold;
 	font-style: oblique;
 	font-display: swap;
@@ -30,7 +30,7 @@ body {
 	position: relative;
 	margin: 0;
 	padding-bottom: 8rem;
-	font-family: "Futura";
+	font-family: 'Futura';
 	text-transform: uppercase;
 }
 @media screen and (min-width: 379px) {
@@ -108,7 +108,7 @@ body {
 .start_screen .field {
 	margin: 0.5rem 0;
 }
-.start_screen input[type="text"] {
+.start_screen input[type='text'] {
 	width: 100%;
 	font-size: 1rem;
 	padding: 0.25rem;
@@ -161,7 +161,7 @@ body {
 .start_screen .start_button {
 	margin: auto;
 	display: block;
-	font-family: "Futura";
+	font-family: 'Futura';
 	font-style: oblique;
 	font-weight: bold;
 	font-size: 1.5rem;
