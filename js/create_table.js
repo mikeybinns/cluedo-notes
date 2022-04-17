@@ -2,10 +2,10 @@ import { update_icon } from './update_icon.js';
 import { suspects as all_suspects, weapons, locations } from './data.js';
 export function catch_form_submit() {
 	const start_form = document.getElementById('start_form');
-	start_form.addEventListener('submit', function () {
+	start_form.addEventListener('submit', function (event) {
 		event.preventDefault();
 		const player_data = {
-			'player count': document.getElementById('player_count').value,
+			'player count': document.querySelector('[name="player_count"]:checked').value,
 			players: {
 				0: document.getElementById('player_1').value,
 				1: document.getElementById('player_2').value,
