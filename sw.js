@@ -1,5 +1,5 @@
 var APP_PREFIX = 'cluedo_notes_'; // Identifier for this app (this needs to be consistent across every cache update)
-var VERSION = 'version_1.1.0'; // Version of the off-line cache (change this value everytime you want to update cache)
+var VERSION = 'version_1.2.0'; // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION;
 var URLS = [
 	'/cluedo-notes/',
