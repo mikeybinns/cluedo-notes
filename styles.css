@@ -105,8 +105,24 @@ body {
 .start_screen legend::first-letter {
 	font-size: 2rem;
 }
-.start_screen .field {
+.start_screen .fieldset {
 	margin: 0.5rem 0;
+}
+.start_screen .fieldset label {
+	background-color: #7c4266;
+	color: white;
+	aspect-ratio: 1;
+	width: 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.start_screen .fieldset label > input {
+	display: none;
+}
+.start_screen .fieldset label > span {
+	margin-top: 2.5px;
+	margin-right: 1px;
 }
 .start_screen input[type='text'] {
 	width: 100%;
