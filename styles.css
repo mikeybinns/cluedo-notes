@@ -32,6 +32,7 @@ body {
 	padding-bottom: 8rem;
 	font-family: 'Futura';
 	text-transform: uppercase;
+	overscroll-behaviour: contain;
 }
 @media screen and (min-width: 379px) {
 	body {
