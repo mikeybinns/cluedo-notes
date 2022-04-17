@@ -33,24 +33,60 @@
 				<form method="POST" id="start_form">
 					<fieldset class="players">
 						<legend>Players:</legend>
-						<div class="field">
-							<label for="player_count">Player count</label>
-							<input
-								type="range"
-								name="player_count"
-								id="player_count"
-								min="2"
-								value="4"
-								max="6"
-								onChange="player_count_label.value = player_count.valueAsNumber"
-							/>
-							<output name="player_count_label" for="player_count">4</output>
+						<div class="fieldset">
+							<legend>Player count</legend>
+							<label for="player_count_2">
+								<span>2</span>
+								<input
+									type="radio"
+									name="player_count"
+									id="player_count_2"
+									value="2"
+								/>
+							</label>
+							<label for="player_count_3"
+								><span>3</span>
+								<input
+									type="radio"
+									name="player_count"
+									id="player_count_3"
+									value="3"
+							/></label>
+							<label for="player_count_4"
+								><span>4</span>
+								<input
+									type="radio"
+									name="player_count"
+									id="player_count_4"
+									value="4"
+									checked
+							/></label>
+							<label for="player_count_5"
+								><span>5</span>
+								<input
+									type="radio"
+									name="player_count"
+									id="player_count_5"
+									value="5"
+							/></label>
+							<label for="player_count_6"
+								><span>6</span>
+								<input
+									type="radio"
+									name="player_count"
+									id="player_count_6"
+									value="6"
+							/></label>
 						</div>
 						<script type="module">
 							import { update_player_fields } from './js/create_start_form.js';
 							update_player_fields();
-							const player_count = document.getElementById('player_count');
-							player_count.addEventListener('change', update_player_fields);
+							const player_count_buttons = document.querySelectorAll(
+								'[name="player_count"]'
+							);
+							for (let button of player_count_buttons) {
+								button.addEventListener("change", update_player_fields);
+							}
 						</script>
 						<div class="field" id="field_player_1">
 							<label for="player_1">Player one</label><br />

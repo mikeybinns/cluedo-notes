@@ -29,7 +29,9 @@ export function create_room_select() {
 	return select;
 }
 export function update_player_fields() {
-	const player_count = document.getElementById('player_count').value;
+	const start_form = document.getElementById("start_form");
+	const form_data = new FormData(start_form);
+	const player_count = form_data.get("player_count") ?? 4;
 	for (let $i = 0; $i < 6; $i++) {
 		const player_number = $i + 1,
 			field_group = document.getElementById(`field_player_${player_number}`),
