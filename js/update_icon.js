@@ -33,8 +33,8 @@ function preventLossOfNotes() {
 	let crosses = document.querySelectorAll('.change_icon[data-current_icon="cross"]');
 	let question_marks = document.querySelectorAll('.change_icon[data-current_icon="question_mark"]');
 	if (ticks.length > 0 || crosses > 0 || question_marks > 0) {
-		addEventListener("beforeunload", beforeUnloadListener, {capture: true});
+		window.addEventListener("beforeunload", beforeUnloadListener, {capture: true});
 	} else {
-		removeEventListener("beforeunload", beforeUnloadListener, {capture: true});
+		window.removeEventListener("beforeunload", beforeUnloadListener, {capture: true});
 	}
 }
