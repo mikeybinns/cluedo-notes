@@ -117,8 +117,12 @@ body {
 	align-items: center;
 	justify-content: center;
 }
-.start_screen .fieldset label > input {
+.start_screen .fieldset input {
 	display: none;
+}
+.start_screen .fieldset input:checked + label {
+	transform: scale(1.2);
+	background-color: #d664aa;
 }
 .start_screen .fieldset label > span {
 	margin-top: 2.5px;
